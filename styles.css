@@ -1,0 +1,49 @@
+body {
+  background: #85a5d4;
+}
+
+@media (min-width: 576px) {
+  .container {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.container {
+  background: white;
+  width: 63%;
+  margin: 10rem auto;
+  padding: 2rem 0;
+  border-radius: 0.3rem;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+.container .item {
+  /*flex: 1;*/
+  flex-basis: 27%;
+  text-align: center;
+}
+.container .item .icon img {
+  width: 3rem;
+}
+.container .item h3 {
+  color: #5572d7;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  letter-spacing: 0.15rem;
+}
+.container .item p {
+  color: #aba7a7;
+}
+.container .item .price {
+  color: #5572d6;
+}
+.container .item .price .sup {
+  vertical-align: super;
+}
+.container .item .price .sub {
+  /*vertical-align: sub;*/
+}
+.container .item .price .middle {
+  font-size: 1.7rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
