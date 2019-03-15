@@ -1,9 +1,29 @@
-document.querySelectorAll('.item').forEach(elem => {
-    elem.addEventListener('mouseover', e => {
-        e.currentTarget.style.backgroundColor = 'rgba(128, 128, 128, 0.1)';
-    });
+const modal = document.querySelector('#modal');
 
-    elem.addEventListener('mouseleave', e => {
-        e.currentTarget.style.backgroundColor = 'inherit';
+document.querySelectorAll('.item').forEach(elem => {
+    elem.addEventListener('click', e => {
+        modal.style.display = 'flex';
+        let clone = e.currentTarget.cloneNode(true);
+        console.log(clone);
+
+        modal.querySelector('.modal-body').innerHTML = '';
+        modal.querySelector('.modal-body').appendChild(clone);
+
     });
+});
+
+modal.querySelector('.close-btn').addEventListener('click', e => {
+    modal.style.display = 'none';
+});
+
+document.addEventListener('click', e => {
+    if (e.target == modal) {
+        modal.style.display = 'none';
+    }
+});
+
+document.addEventListener('keydown', e => {
+    if (e.key === "Escape") {
+        modal.style.display = 'none';
+    }
 });
