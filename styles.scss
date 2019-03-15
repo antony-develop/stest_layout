@@ -1,6 +1,6 @@
 body {
   background: #85a5d4;
-  font-family: sans-serif;
+  font-family: roboto, sans-serif;
 }
 
 .container {
@@ -42,7 +42,7 @@ body {
   .title {
     color: #5572d7;
     text-transform: uppercase;
-    letter-spacing: 0.15rem;
+    letter-spacing: 0.25rem;
     font-size: 1.2em;
     margin: 1rem 0;
     font-weight: bold;
@@ -50,8 +50,8 @@ body {
 
   .description {
     color: #aba7a7;
-    font-weight: bold;
-    font-size: 0.85rem;
+    font-weight: 500;
+    font-size: 0.9rem;
   }
 
   .price {
