@@ -3,29 +3,35 @@ body {
   font-family: sans-serif;
 }
 
-@media (min-width: 576px) {
-  .container {
-    display: flex;
-  }
-}
 .container {
   background: white;
   width: 60%;
   margin: 7rem auto;
-  padding: 2rem 2rem;
+  padding: 1.5rem;
   border-radius: 0.3rem;
   box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3);
 }
-.container .item {
+
+.container-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.item-container .item:hover {
+  background: rgba(128, 128, 128, 0.1);
+  cursor: pointer;
+}
+
+.item {
   flex: 1;
   text-align: center;
-  padding: 1rem 2.5rem;
+  padding: 1.5rem 1rem;
 }
-.container .item .icon img {
+.item .icon img {
   width: 4.5rem;
   margin-bottom: 1rem;
 }
-.container .item .title {
+.item .title {
   color: #5572d7;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
@@ -33,25 +39,96 @@ body {
   margin: 1rem 0;
   font-weight: bold;
 }
-.container .item .description {
+.item .description {
   color: #aba7a7;
   font-weight: bold;
   font-size: 0.85rem;
 }
-.container .item .price {
+.item .price {
   color: #5572d6;
   margin-top: 1.5rem;
 }
-.container .item .price .sup {
+.item .price .sup {
   vertical-align: top;
   line-height: 1.8rem;
 }
-.container .item .price .sub {
-  /*vertical-align: sub;*/
-}
-.container .item .price .middle {
+.item .price .middle {
   font-size: 2rem;
   font-weight: bold;
+}
+
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  background: #2b59ff;
+  color: white;
+  padding: 0.75rem 2.5rem;
+  border-radius: 0.25em;
+}
+
+#modal {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+}
+#modal .modal-content {
+  background: white;
+  padding: 1rem;
+  width: 75%;
+  border-radius: 0.2rem;
+}
+#modal .modal-header {
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+}
+#modal .modal-footer {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+#modal .close-btn {
+  float: right;
+}
+#modal .close-btn:hover, #modal .close-btn:focus {
+  cursor: pointer;
+}
+#modal .close-btn img {
+  width: 1rem;
+}
+
+@media (min-width: 768px) {
+  .item-container {
+    display: flex;
+  }
+
+  .item {
+    padding: 1rem 2.5rem;
+  }
+
+  #modal .modal-content {
+    width: 50%;
+  }
+
+  .container {
+    width: 70%;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 60%;
+  }
+
+  #modal .modal-content {
+    width: 28%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
