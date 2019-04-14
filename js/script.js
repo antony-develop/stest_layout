@@ -1,15 +1,15 @@
 const modal = document.querySelector('#modal');
+const itemContainer = document.querySelector('#item-container');
 
-document.querySelectorAll('.item').forEach(elem => {
-    elem.addEventListener('click', e => {
+itemContainer.addEventListener('click', e => {
+    const item = e.target.closest('.item');
+    if (item) {
         modal.style.display = 'flex';
-        let clone = e.currentTarget.cloneNode(true);
-        console.log(clone);
+        let clone = item.cloneNode(true);
 
         modal.querySelector('.modal-body').innerHTML = '';
         modal.querySelector('.modal-body').appendChild(clone);
-
-    });
+    }
 });
 
 modal.querySelector('.close-btn').addEventListener('click', e => {
